@@ -1,11 +1,11 @@
 
-(define cualculate2
+(define calculate2
   (lambda (test? x y)
     (test? x y)))
 
 
-(print (cualculate2 + 4 5))
-(print (cualculate2 * 4 5))
+(print (calculate2 + 4 5))
+(print (calculate2 * 4 5))
 
 (define sub1
   (lambda (n)
