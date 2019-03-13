@@ -16,14 +16,14 @@
 (print (reverse '(a b c d) '()))
 
 
-(define multiReverse
+(define reverse*
   (lambda (ls acc)
     (cond 
       ((null? ls) acc)
       ((atom? (car ls)) (reverse ls acc))
-      (else (cons (reverse (car ls) (multiReverse (cdr ls) acc)))))))
+      (else (cons (reverse (car ls) (reverse* (cdr ls) acc)))))))
 
-(print (multiReverse '(a b c (d e f)) '()))
+(print (reverse* '(a b c (d e f)) '()))
 
 
 
